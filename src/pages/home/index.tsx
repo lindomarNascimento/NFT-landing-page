@@ -2,6 +2,7 @@ import {
   Banner,
   Best,
   CollectionImages,
+  Footer,
   Header,
   Popular,
   Presentation
@@ -17,6 +18,7 @@ export const Home = () => {
       <Banner />
       <Popular />
       <Best />
+      <Footer />
     </S.ContainerHeader>
   );
 };

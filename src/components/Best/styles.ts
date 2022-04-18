@@ -5,6 +5,8 @@ import { flex } from "../../styles/theme/theme";
 export const ContainerBest = styled.section`
   ${flex("center", "center")};
   flex-direction: column;
+
+  margin-bottom: 100px;
 `;
 export const Title = styled.h2`
   font-size: ${({ theme }) => theme.fontSize[50]};
