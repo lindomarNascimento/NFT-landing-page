@@ -18,7 +18,6 @@ export const Footer = () => {
             <S.IconArrowTop size={40} />
           </S.WrapperIconArrow>
         </S.FooterLogo>
-
         <S.FooterLinks>
           <S.Newsletter>
             <S.NewsletterTitle>
@@ -34,34 +33,19 @@ export const Footer = () => {
           </S.Newsletter>
           <S.Menu>
             <S.MenuWrapper>
-              <S.List>
-                <S.ListTitle>{FooterLinks.menu.first.title}</S.ListTitle>
-                {FooterLinks.menu.first.links.map((item) => (
-                  <S.ListItem key={item.name}>
-                    <S.ListAnchor href={item.link}>{item.name}</S.ListAnchor>
-                  </S.ListItem>
-                ))}
-              </S.List>
-              <S.List>
-                <S.ListTitle>{FooterLinks.menu.second.title}</S.ListTitle>
-                {FooterLinks.menu.second.links.map((item) => (
-                  <S.ListItem key={item.name}>
-                    <S.ListAnchor href={item.link}>{item.name}</S.ListAnchor>
-                  </S.ListItem>
-                ))}
-              </S.List>
-              <S.List>
-                <S.ListTitle>{FooterLinks.menu.thirdh.title}</S.ListTitle>
-                {FooterLinks.menu.thirdh.links.map((item) => (
-                  <S.ListItem key={item.name}>
-                    <S.ListAnchor href={item.link}>{item.name}</S.ListAnchor>
-                  </S.ListItem>
-                ))}
-              </S.List>
+              {FooterLinks.menu.map((item, index) => (
+                <S.List key={index}>
+                  <S.ListTitle>{item.title}</S.ListTitle>
+                  {item.links.map((item) => (
+                    <S.ListItem key={item.name}>
+                      <S.ListAnchor href={item.link}>{item.name}</S.ListAnchor>
+                    </S.ListItem>
+                  ))}
+                </S.List>
+              ))}
             </S.MenuWrapper>
           </S.Menu>
         </S.FooterLinks>
-
         <S.FooterCopyright>
           <S.LinkSite href="www.rockeatseat.com.br">
             www.rockeatseat.com.br

@@ -1,6 +1,6 @@
 export const FooterLinks = {
-  menu: {
-    first: {
+  menu: [
+    {
       title: "Empresas",
       links: [
         {
@@ -21,8 +21,7 @@ export const FooterLinks = {
         },
       ],
     },
-
-    second: {
+    {
       title: "Mapa",
       links: [
         {
@@ -43,8 +42,7 @@ export const FooterLinks = {
         },
       ],
     },
-
-    thirdh: {
+    {
       title: "Links",
       links: [
         {
@@ -65,8 +63,7 @@ export const FooterLinks = {
         },
       ],
     },
-  },
-
+  ],
   medias: {
     youtube: "https://www.youtube.com",
     instagram: "https://www.instagram.com",
