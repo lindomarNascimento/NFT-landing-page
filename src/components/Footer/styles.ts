@@ -2,11 +2,15 @@ import styled from "styled-components";
 import { AiOutlineArrowUp, AiOutlineInstagram } from "react-icons/ai";
 import { FiYoutube, FiTwitter } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
-import { flex } from "../../styles/theme/theme";
+import { containerCenter, flex } from "../../styles/theme/theme";
 import { ReactComponent as LogoIcon } from "../../assets/logo.svg";
 
 export const FooterContainer = styled.footer`
   background-color: ${({ theme }) => theme.colors.grey};
+`;
+export const FooterContent = styled.section`
+  ${containerCenter()};
+  padding: 0 20px;
 `;
 export const FooterLogo = styled.div`
   list-style: none;
@@ -24,11 +28,12 @@ export const WrapperIconArrow = styled.div`
   height: 80px;
   background-color: ${({ theme }) => theme.colors.orange};
   ${flex("center", "center")};
+
+  cursor: pointer;
 `;
 export const IconArrowTop = styled(AiOutlineArrowUp)`
   fill: ${({ theme }) => theme.colors.black};
 `;
-
 export const FooterLinks = styled.section`
   ${flex("center", "center")};
   border-top: 1px solid ${({ theme }) => theme.colors.lightGrey};
@@ -51,6 +56,7 @@ export const NewsletterTitleColor = styled.small`
   font-size: ${({ theme }) => theme.fontSize[30]};
   color: ${({ theme }) => theme.colors.orange};
   font-weight: 500;
+  margin-left: 8px;
 `;
 export const NewsletterWrapper = styled.div`
   display: flex;
@@ -119,6 +125,7 @@ export const ListAnchor = styled.a`
   color: ${({ theme }) => theme.colors.lightGrey};
 
   width: 100%;
+  text-decoration: none;
 
   transition: all 0.3s ease-in-out;
   &:hover {
@@ -145,6 +152,9 @@ export const Medias = styled.div`
   }
 `;
 
+export const Anchor = styled.a`
+  list-style-type: none;
+`;
 export const InstagramIcon = styled(AiOutlineInstagram)`
   fill: ${({ theme }) => theme.colors.lightGrey};
 

@@ -4,9 +4,9 @@ import { PopularEditions } from "../../mocks/Popular";
 
 export const Popular = () => {
   return (
-    <S.ContainerPopular>
-      {PopularEditions.map((edits) => (
-        <>
+    <>
+      {PopularEditions.map((edits, index) => (
+        <S.ContainerPopular key={index}>
           <S.Title>
             <S.TitleColor>{edits.title.ColorTitle} </S.TitleColor>
             {edits.title.Title}
@@ -14,9 +14,9 @@ export const Popular = () => {
           <S.Content>
             <S.FirstLine>
               {edits.content.firstLine.map((card, index) => (
-                <S.Card>
+                <S.Card key={index}>
                   <S.CardTitle>
-                    Astronauta {index+1}
+                    Astronauta {index + 1}
                     <S.CardIcon size={20} />
                   </S.CardTitle>
                   <S.CardDescription>
@@ -29,9 +29,9 @@ export const Popular = () => {
             </S.FirstLine>
             <S.LastLine>
               {edits.content.secondLine.map((card, index) => (
-                <S.Card>
+                <S.Card key={index}>
                   <S.CardTitle>
-                    Astronauta {index+3}
+                    Astronauta {index + 3}
                     <S.CardIcon size={20} />
                   </S.CardTitle>
                   <S.CardDescription>
@@ -43,8 +43,8 @@ export const Popular = () => {
               ))}
             </S.LastLine>
           </S.Content>
-        </>
+        </S.ContainerPopular>
       ))}
-    </S.ContainerPopular>
+    </>
   );
 };

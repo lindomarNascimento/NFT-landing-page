@@ -4,6 +4,8 @@ import styled from "styled-components";
 export const Header = styled.header`
   background-color: ${(props) => props.theme.colors.black};
   ${flex("space-between", "center")};
+
+  margin-top: 40px;
 `;
 
 export const Logo = styled.a`
