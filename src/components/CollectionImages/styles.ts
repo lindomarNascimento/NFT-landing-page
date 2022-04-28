@@ -14,6 +14,7 @@ export const ContainerImgs = styled.section`
 export const Image = styled.div`
   flex: 1;
 `;
+
 export const Img = styled.img`
   cursor: pointer;
 

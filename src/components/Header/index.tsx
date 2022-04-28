@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { ReactComponent as LogoIcon } from "../../assets/logo.svg";
 import { ReactComponent as MetalMaskIcon } from "../../assets/logo_MetaMask.svg";
-import { listMenu } from "../../mocks/Menu";
+import { listMenu } from "../../mocks/MENU";
 import { SizeWidth } from "../../utils";
 
 import * as S from "./styles";
 
 export const Header = () => {
-  const MenuMobile = () => {
+  const menuMobile = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleOpen = () => {
@@ -18,20 +18,19 @@ export const Header = () => {
       <S.MenuMobileWrapper>
         <S.HamburguerIcon onClick={handleOpen} size={40} />
         <S.NavMob isOpen={isOpen}>
-          <S.CloseIcon onClick={handleOpen} size={40}/>
+          <S.CloseIcon onClick={handleOpen} size={40} />
           {listMenu.map((item) => (
             <S.NavItem key={item.id}>{item.category}</S.NavItem>
           ))}
         </S.NavMob>
-        <S.BackgroundBlur isOpen={isOpen}/>
-
+        <S.BackgroundBlur isOpen={isOpen} />
       </S.MenuMobileWrapper>
     );
   };
 
   return (
     <S.Header>
-      {SizeWidth() <= 1024 && MenuMobile()}
+      {SizeWidth() <= 1024 && menuMobile()}
       <S.Logo>
         <LogoIcon />
       </S.Logo>

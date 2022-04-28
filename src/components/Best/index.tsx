@@ -1,4 +1,4 @@
-import { BestEdit } from "../../mocks/Best";
+import { BestEdit } from "../../mocks/BEST";
 import * as S from "./styles";
 
 export const Best = () => {

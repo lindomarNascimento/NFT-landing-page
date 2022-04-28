@@ -1,4 +1,4 @@
-import { flex } from "../../styles/theme/theme";
+import { containerCenter, flex } from "../../styles/theme/theme";
 import styled, { css } from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
@@ -10,7 +10,9 @@ type NavMobProps = {
 export const Header = styled.header`
   background-color: ${(props) => props.theme.colors.black};
   ${flex("space-between", "center")};
+  ${containerCenter()};
 
+  padding: 0 20px;
   margin-top: 40px;
 `;
 
@@ -43,6 +45,7 @@ export const NavMob = styled.div<NavMobProps>`
       left: 0;
     `}
 `;
+
 export const BackgroundBlur = styled.div<NavMobProps>`
   background: ${(props) => props.theme.colors.lightGrey};
   position: fixed;
@@ -66,6 +69,7 @@ export const BackgroundBlur = styled.div<NavMobProps>`
       left: 0;
     `}
 `;
+
 export const CloseIcon = styled(GrClose)`
   position: absolute;
   top: 20px;

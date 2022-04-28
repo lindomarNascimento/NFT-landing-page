@@ -1,6 +1,5 @@
 import * as S from "./styles";
-import AstronautaSrc from "../../assets/astronauta-1.png";
-import { PopularEditions } from "../../mocks/Popular";
+import { PopularEditions } from "../../mocks/POPULAR";
 
 export const Popular = () => {
   return (

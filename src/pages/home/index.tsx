@@ -12,14 +12,14 @@ import * as S from "./styles";
 export const Home = () => {
   return (
     <>
-      <S.ContainerHeader>
-        <Header />
+      <Header />
+      <S.ContainerCenter>
         <Presentation />
         <CollectionImages />
         <Banner />
         <Popular />
         <Best />
-      </S.ContainerHeader>
+      </S.ContainerCenter>
       <Footer />
     </>
   );

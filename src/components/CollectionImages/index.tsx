@@ -1,7 +1,5 @@
-import { listImage } from "../../mocks/ImageCollage";
+import { listImage } from "../../mocks/IMAGE_COLLAGE";
 import * as S from "./styles";
-
-import AvatarImg from "../../assets/group-avarts.png";
 
 export const CollectionImages = () => {
   return (

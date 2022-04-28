@@ -1,4 +1,4 @@
-import { FooterLinks } from "../../mocks/Footer/links";
+import { FooterLinks } from "../../mocks/FOTTER/links";
 import * as S from "./styles";
 
 export const Footer = () => {
